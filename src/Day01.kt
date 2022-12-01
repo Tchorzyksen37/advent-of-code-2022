@@ -1,7 +1,7 @@
 import java.util.stream.Collectors
 
 fun main() {
-    fun getTotalCaloriesCarriedList(input: List<String>): List<Int> {
+    fun getTotalCaloriesCarriedSortedList(input: List<String>): List<Int> {
         var caloriesSum = 0
         val caloriesSums = mutableListOf<Int>()
         for (str in input) {
@@ -20,12 +20,12 @@ fun main() {
     }
 
     fun part1(input: List<String>): Int {
-        val totalCaloriesCarriedList = getTotalCaloriesCarriedList(input)
+        val totalCaloriesCarriedList = getTotalCaloriesCarriedSortedList(input)
         return totalCaloriesCarriedList.last()
     }
 
     fun part2(input: List<String>): Int {
-        val totalCaloriesCarriedList = getTotalCaloriesCarriedList(input)
+        val totalCaloriesCarriedList = getTotalCaloriesCarriedSortedList(input)
         val totalCaloriesCarriedListSize = totalCaloriesCarriedList.size
         return totalCaloriesCarriedList[totalCaloriesCarriedListSize - 1] + totalCaloriesCarriedList[totalCaloriesCarriedListSize - 2] + totalCaloriesCarriedList[totalCaloriesCarriedListSize - 3]
     }
