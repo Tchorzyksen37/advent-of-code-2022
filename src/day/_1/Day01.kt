@@ -1,3 +1,6 @@
+package day._1
+
+import readInput
 import java.util.stream.Collectors
 
 fun main() {
@@ -31,11 +34,11 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day01_test")
+    val testInput = readInput("day/_1/Day01_test")
     check(part1(testInput) == 24000)
     check(part2(testInput) == 45000)
 
-    val input = readInput("Day01")
+    val input = readInput("day/_1/Day01")
     println(part1(input))
     println(part2(input))
 }
