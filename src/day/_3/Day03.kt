@@ -60,7 +60,6 @@ fun main() {
         return badgesSum
     }
 
-    // test if implementation meets criteria from the description, like:
     val testInput = readInput("day/_3/Day03_test")
     check(part1(testInput) == 157)
     check(part2(testInput) == 70)

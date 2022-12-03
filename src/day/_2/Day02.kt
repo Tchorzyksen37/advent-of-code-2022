@@ -86,7 +86,6 @@ fun main() {
         return totalScore
     }
 
-    // test if implementation meets criteria from the description, like:
     val testInput = readInput("day/_2/Day02_test")
     check(part1(testInput) == 15)
     check(part2(testInput) == 12)

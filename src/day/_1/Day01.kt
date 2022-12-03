@@ -33,7 +33,6 @@ fun main() {
         return totalCaloriesCarriedList[totalCaloriesCarriedListSize - 1] + totalCaloriesCarriedList[totalCaloriesCarriedListSize - 2] + totalCaloriesCarriedList[totalCaloriesCarriedListSize - 3]
     }
 
-    // test if implementation meets criteria from the description, like:
     val testInput = readInput("day/_1/Day01_test")
     check(part1(testInput) == 24000)
     check(part2(testInput) == 45000)
