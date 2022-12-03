@@ -11,7 +11,7 @@ fun main() {
         // C - Scissors | Z - Scissors
         var totalScore = 0
         for (str in input) {
-            var round = str.split(" ")
+            val round = str.split(" ")
             var roundScore = 0
             if (round[1] == "X") {
                 roundScore += 1
@@ -52,10 +52,9 @@ fun main() {
         // z - win
         var totalScore = 0
         for (str in input) {
-            var round = str.split(" ")
+            val round = str.split(" ")
             var roundScore = 0
             if (round[1] == "X") {
-                roundScore += 0
                 if (round[0] == "A") {
                     roundScore += 3
                 } else if (round[0] == "B") {
