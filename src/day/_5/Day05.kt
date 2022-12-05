@@ -34,7 +34,7 @@ class Day05(filePath: String) {
 
 	fun part1(): String {
 		val stacks = readStacks(List(numberOfStacks) { ArrayDeque() })
-		moves.map { step ->
+		moves.forEach { step ->
 			repeat(step.quantity) {
 				val crate = stacks[step.source - 1].removeFirst()
 				stacks[step.target - 1].addFirst(crate)
@@ -46,8 +46,10 @@ class Day05(filePath: String) {
 
 	fun part2(): String {
 		val stacks = readStacks(List(numberOfStacks) { ArrayDeque() })
-		moves.map { step ->
-			stacks[step.source - 1].subList(0, step.quantity).asReversed()
+		moves.forEach { step ->
+			stacks[step.source - 1]
+				.subList(0, step.quantity)
+				.asReversed()
 				.map { stacks[step.target - 1].addFirst(it) }
 				.map { stacks[step.source - 1].removeFirst() }
 		}
